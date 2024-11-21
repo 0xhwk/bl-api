@@ -1,0 +1,22 @@
+###
+# GET All ADDRESSES
+GET http://localhost:8080/sanctioned/getSanctionedAddresses/
+
+###
+# ADD SANCTIONED ADDRESS
+POST http://localhost:8080/sanctioned/addSanctionedAddress
+Content-Type: application/json
+
+{
+    "address": "0x12"
+}
+###
+DELETE http://localhost:8080/sanctioned/removeSanctionedAddress
+Content-Type: application/json
+
+{
+    "address": "0x122"
+}
+
+###
+GET http://localhost:8080/sanctioned/isAddressSanctioned?address=0x32
