@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  bl-api:
+    build:
+      context: . # Use the current directory
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080" # Map host port 8080 to container port 8080
+    volumes:
+      - .:/bl-api # Mount local directory to the container for development
+    command: ["npm", "start"] # Optional: Override the CMD in Dockerfile
